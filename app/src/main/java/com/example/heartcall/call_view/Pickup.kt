@@ -35,13 +35,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.heartcall.ui.theme.appFontFamily
 
-@Preview(name="PickupView")
 @Composable
-fun PickupContainer(){
+fun PickupContainer(onCurrentLocationClick :()->Unit){
         Column {
             Text(text = "Where To Pickup?", fontFamily = appFontFamily, fontWeight = FontWeight.Bold, fontSize = 18.sp)
             Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 32.dp,vertical=32.dp)) {
-                CurrentLocationBtn()
+                CurrentLocationBtn(onCurrentLocationClick)
                 CustomDivider()
 
                 ChooseLocationBtn()
@@ -58,12 +57,12 @@ fun PickupContainer(){
 }
 
 @Composable
-fun CurrentLocationBtn(){
+fun CurrentLocationBtn(onClick: ()->Unit){
     val modifier : Modifier = Modifier
         .fillMaxWidth()
         .size(height = 50.dp, width = 0.dp)
     Button(
-        onClick = { },
+        onClick = onClick,
         modifier = modifier
 
         ) {
@@ -84,7 +83,9 @@ fun ChooseLocationBtn(){
 
     OutlinedButton(
         modifier = modifier,
-        onClick = { },
+        onClick = {
+
+        },
 
 
         ) {
