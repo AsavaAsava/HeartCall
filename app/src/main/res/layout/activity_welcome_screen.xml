@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".WelcomeScreen">
 
     <ImageView
@@ -50,7 +51,9 @@
             android:background="@drawable/button_outline_border"
             android:fontFamily="@font/inter_medium"
             android:paddingVertical="16dp"
-            android:text="Signin With Google" />
+            android:text="Signin With Google"
+            android:textColor="@color/black"
+            />
 
         <Space
             android:layout_width="match_parent"

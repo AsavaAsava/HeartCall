@@ -37,6 +37,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.heartcall.call_view.Appbar
+import com.example.heartcall.call_view.CallMap
 import com.example.heartcall.call_view.PickupContainer
 import com.example.heartcall.ui.theme.HeartCallTheme
 
@@ -60,8 +62,29 @@ class CallActivity : ComponentActivity() {
 @Preview(name="Call View")
 @Composable
 fun CallView(){
-    val modifier : Modifier = Modifier.fillMaxHeight(0.6f).fillMaxWidth().background(Color.White)
+    val modifier : Modifier = Modifier
+        .fillMaxWidth()
+        .fillMaxHeight(1f)
+        .background(Color.White)
+
     Box (modifier = modifier){
-        PickupContainer()
+        CallMap()
+        Appbar()
+        Box(modifier= Modifier
+            .fillMaxHeight(0.4f)
+            .align(Alignment.BottomCenter)
+            .clip(
+                RoundedCornerShape(16.dp, 16.dp, 0.dp, 0.dp)
+            )
+            .background(Color.White)
+            .padding(16.dp)) {
+            PickupContainer()
+
+        }
     }
+}
+@Composable
+fun Pickup(){
+    val modifier = Modifier
+
 }
