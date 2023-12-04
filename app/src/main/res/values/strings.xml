@@ -4,4 +4,5 @@
     <string name="title_activity_emergency">EmergencyActivity</string>
     <string name="title_activity_booking">BookingActivity</string>
     <string name="title_activity_trip">TripActivity</string>
+    <string name="title_activity_rating">RatingActivity</string>
 </resources>
