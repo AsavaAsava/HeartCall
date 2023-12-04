@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,16 +16,60 @@
         android:theme="@style/Theme.HeartCall"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".TripHistoryActivity"
+            android:exported="false"
+            android:label="@string/title_activity_trip_history"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".RatingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_rating"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".TripActivity"
+            android:exported="false"
+            android:label="@string/title_activity_trip"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".CallActivity"
+            android:exported="false"
+            android:label="@string/title_activity_call"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".EmergencyScreen"
+            android:exported="false"
+            android:label="@string/title_activity_emergency"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".BookingDetail"
+            android:exported="false"
+            android:label="@string/title_activity_booking"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".WelcomeScreen"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.HeartCall">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HeartCall" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCAilaB6is41YbQopdFw1oHt1q6VUbBt28" />
     </application>
 
 </manifest>

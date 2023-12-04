@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HeartCall</string>
+    <string name="title_activity_call">CallActivity</string>
+    <string name="title_activity_emergency">EmergencyActivity</string>
+    <string name="title_activity_booking">BookingActivity</string>
+    <string name="title_activity_trip">TripActivity</string>
+    <string name="title_activity_rating">RatingActivity</string>
+    <string name="title_activity_trip_history">TripHistoryActivity</string>
 </resources>
