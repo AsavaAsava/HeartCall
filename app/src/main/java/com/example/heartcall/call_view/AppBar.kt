@@ -1,7 +1,9 @@
 package com.example.heartcall.call_view
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -22,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
@@ -30,6 +33,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.heartcall.R
+import com.example.heartcall.TripHistoryActivity
 
 @Composable
 fun HamburgerIcon(){
@@ -45,7 +49,6 @@ fun HamburgerIcon(){
 
 @Composable
 fun AppLogo(){
-    var modifier : Modifier = Modifier
 
     Text(text = stringResource(id = R.string.app_name), color = MaterialTheme.colorScheme.primary, fontSize = 20.sp, fontFamily = FontFamily(fonts = listOf(
         Font(resId = R.font.fredoka_one)
@@ -55,9 +58,14 @@ fun AppLogo(){
 
 @Composable
 fun ProfilePhoto(){
+    val context = LocalContext.current
+
     val modifier : Modifier = Modifier
         .size(35.dp)
-        .clip(CircleShape)
+        .clip(CircleShape).clickable(onClick = {
+            context.startActivity(Intent(context, TripHistoryActivity::class.java))
+
+        })
 
     Image(
         painter = painterResource(id = R.drawable.itadori),

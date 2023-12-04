@@ -60,6 +60,7 @@ import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.rememberMarkerState
 
 
+
 class EmergencyScreen : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -210,6 +211,7 @@ class EmergencyScreen : ComponentActivity() {
                     .fillMaxSize()
                     .padding(innerPadding),
                 contentAlignment = Alignment.Center
+
             ) { val nairobi = LatLng(-1.3093,36.8125)
                 val end = LatLng(-1.297, 36.874)
                 val cameraPositionState = rememberCameraPositionState {
@@ -261,8 +263,10 @@ class EmergencyScreen : ComponentActivity() {
                     cameraPositionState = cameraPositionState,
                 ) {
                     Polyline(points = points)
+
                     Marker(state = sourceMarkerState)
                     Marker(state = destinationMarkerState)
+
                 }
             }
         }
