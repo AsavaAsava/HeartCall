@@ -1,5 +1,6 @@
 package com.example.heartcall.call_view
 
+import android.content.Intent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -29,10 +30,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.heartcall.EmergencyScreen
+import com.example.heartcall.MainActivity
 import com.example.heartcall.ui.theme.appFontFamily
 
 @Composable
@@ -61,8 +65,11 @@ fun CurrentLocationBtn(onClick: ()->Unit){
     val modifier : Modifier = Modifier
         .fillMaxWidth()
         .size(height = 50.dp, width = 0.dp)
+    val context = LocalContext.current
     Button(
-        onClick = onClick,
+        onClick = {
+                  context.startActivity(Intent(context, EmergencyScreen::class.java))
+        },
         modifier = modifier
 
         ) {

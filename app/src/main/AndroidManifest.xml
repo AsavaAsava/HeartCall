@@ -20,6 +20,17 @@
             android:label="@string/title_activity_call"
             android:theme="@style/Theme.HeartCall" />
         <activity
+            android:name=".EmergencyScreen"
+            android:exported="false"
+            android:label="@string/title_activity_emergency"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
+            android:name=".BookingDetail"
+            android:exported="false"
+            android:label="@string/title_activity_booking"
+            android:theme="@style/Theme.HeartCall" />
+
+        <activity
             android:name=".WelcomeScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"
@@ -48,7 +59,7 @@
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:value="AIzaSyCAilaB6is41YbQopdFw1oHt1q6VUbBt28" />
     </application>
 
 </manifest>
