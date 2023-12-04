@@ -16,6 +16,11 @@
         android:theme="@style/Theme.HeartCall"
         tools:targetApi="31">
         <activity
+            android:name=".TripHistoryActivity"
+            android:exported="false"
+            android:label="@string/title_activity_trip_history"
+            android:theme="@style/Theme.HeartCall" />
+        <activity
             android:name=".RatingActivity"
             android:exported="false"
             android:label="@string/title_activity_rating"
