@@ -1,5 +1,6 @@
 package com.example.heartcall
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -37,6 +38,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -208,8 +210,8 @@ fun TripDistance(){
 
 @Composable
 fun SubmitButton(){
-
-    Button(onClick = {}, modifier = Modifier
+    val context = LocalContext.current
+    Button(onClick = {context.startActivity(Intent(context, TripHistoryActivity::class.java))}, modifier = Modifier
         .padding(vertical = 32.dp)
         .fillMaxWidth()
         .size(height = 50.dp, width = 0.dp)) {

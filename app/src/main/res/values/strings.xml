@@ -3,10 +3,7 @@
     <string name="title_activity_call">CallActivity</string>
     <string name="title_activity_emergency">EmergencyActivity</string>
     <string name="title_activity_booking">BookingActivity</string>
-<<<<<<< HEAD
-=======
     <string name="title_activity_trip">TripActivity</string>
     <string name="title_activity_rating">RatingActivity</string>
     <string name="title_activity_trip_history">TripHistoryActivity</string>
->>>>>>> 308535164b5343d53f3a17ddc44788f38cf6e080
 </resources>
